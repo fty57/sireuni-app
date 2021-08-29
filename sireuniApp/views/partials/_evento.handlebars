@@ -1,0 +1,43 @@
+<div class="mini-container">
+
+        {{#each eventos}}
+        <div class="row-2">
+            <div class="message">
+
+                <div class="title">
+                    {{nome}}
+                </div>
+
+                <div class="text-forum">
+                    {{descricao}}
+                </div>
+
+                <div class="evento-data">
+                    {{data}}
+                </div>                
+                
+                <!-- EDIT / DELETE-->
+
+                <div class="button-group">
+
+                    <a href="/eventos/edit/{{_id}}"><button class="button">Editar evento</button></a>
+                    <form action="/eventos/deletar" method="POST">
+                        <input type="hidden" name="id" value="{{_id}}">
+                        <button type="submit" class="button" id="red">Deletar evento</button>
+                    </form>
+
+                </div>
+
+            </div>
+        </div>
+
+        {{else}}
+            <h4 class="mt-3">Nenhum evento registrado</h4>
+        {{/each}}
+
+        <!-- ADD EVENTO -->
+        <a  href="/eventos/add"><button class="button">Novo Evento</button></a> 
+
+    </div>
+    
+</div>

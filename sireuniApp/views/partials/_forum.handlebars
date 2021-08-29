@@ -1,0 +1,41 @@
+<div class="mini-container gray">
+    
+        {{#each forums}}
+
+            <div class="row-2 white shadow-white">
+                <div class="message">
+                    <!-- TITLE -->
+                    <div class="title">
+                        {{titulo}}
+                    </div>
+                    <!-- TEXT -->
+                    <div class="text-forum">
+                        {{descricao}}
+                    </div>
+
+                    <!-- DATA -->
+
+                    <!-- EDIT / DELETE-->
+
+                    <div class="button-group">
+
+                        <a href="/forum/edit/{{_id}}"><button class="button">Editar tópico</button></a>
+                        <form action="/forum/deletar" method="POST">
+                            <input type="hidden" name="id" value="{{_id}}">
+                            <button type="submit" class="button" id="red">Deletar tópico</button>
+                        </form>
+
+                    </div>
+
+                </div>
+        
+            </div>
+
+        {{else}}
+            <h4 class="mt-3">Nenhum tópico registrado</h4>
+        {{/each}}
+
+        <!-- ADD TÓPICO -->
+        <a href="/forum/add"><button class="button">Novo tópico</button></a>
+
+</div>

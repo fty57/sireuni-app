@@ -1,0 +1,56 @@
+{{>_navbar}}
+
+{{#each erros}}
+    <div class="alert alert-danger">{{texto}}</div>
+{{else}}
+
+{{/each}}
+
+<h3>Nova receita: </h3>
+<!-- - MODAL-NEW-RECIPE -->
+
+<div class="modal-bg">
+    <div class="modal">
+
+        <form action="/receitas/nova" method="POST">
+
+            <div class="div-01">
+                <!-- NOME -->
+                <div class="receita-element">
+                   <span>Nome da receita:</span>
+                   <input type="text" id="nome" name="nome" >
+                </div>
+                <!-- DESCRIÇÃO -->
+                <div class="receita-element">
+                    <span>Descrição:</span>
+                    <input type="text" id="descricao" name="descricao">
+                </div>
+            </div>
+
+            <div class="div-01">
+                <!-- RENDIMENTO -->
+                <div class="receita-element">
+                    <span>Rendimento:</span>
+                    <input type="text" id="rendimento" name="rendimento">
+                </div>
+                
+                <div class="receita-element">
+                    <span>Avaliação:</span>
+                    <input type="text" id="avaliacao" name="avaliacao">
+                </div>
+            </div>
+
+            <div class="div-02">
+                <!-- INGREDIENTES -->
+                <div class="receita-element">
+                    <span>Ingredientes:</span>
+                    <textarea type="text" id="ingredientes" name="ingredientes" class="ingredientes"></textarea>
+                </div>
+
+            </div>
+
+            <button class="button" type="submit">Criar receita</button>
+        </form>
+
+    </div>
+</div>

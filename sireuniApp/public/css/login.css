@@ -1,0 +1,119 @@
+/* --- IMPORTS --- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+
+/* --- GERAL --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* --- CONTAINER --- */
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #185239;
+}
+
+/* --- LOGIN --- */
+.login {
+    width: 400px;
+    height: 470px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: 0px 0px 5px 1px rgba(21,69,48,1);
+}
+
+.logo {
+    max-width: 255px;
+    margin-top: 15px;
+    transform: translate(0px, -50px);
+}
+
+/* --- ACESSO --- */
+.acesso {
+    transform: translate(0px, -30px);
+}
+
+.senha {
+    display: flex;
+}
+
+.dados {
+    width: 260px;
+    margin-bottom: 20px;
+    padding: 5px 0px;
+    outline: none;
+    border: none;
+    border-bottom: solid 2px #19B773;
+}
+
+.icon {
+    position: absolute;
+    right: 0;
+    font-size: 15px;
+    color: #2C4D52;
+    cursor: pointer;
+}
+
+#hide1 {
+    display: none;
+}
+
+::placeholder {
+    color: #2C4D52;
+    font-size: 13px;
+    font-style: italic;
+}
+
+/* --- BOTÃO --- */
+.button {
+    text-decoration: none;
+    width: 260px;
+    padding: 15px;
+    margin-top: 45px;
+    cursor: pointer;
+    border: none;
+    border-radius: 7px;
+    background-color: #19B773;
+    transition: all 0.2s;
+    font-size: 15px;
+    font-weight: 400;
+    color: #FFF;
+    transform: translate(0px, -30px);
+}
+
+.button a {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+}
+
+
+.button:hover {
+    color: #FFFFFF;
+    background-color: #1CDA88;
+    box-shadow: 0px 8px 0px 0px rgba(25,183,115,1);
+}
+
+/* --- INFOR --- */
+.infor {
+    margin-top: 20px;
+    font-size: 11px;
+    transform: translate(0px, -30px);
+}
+
+span {
+    color: #218BC7;
+    font-weight: 500;
+}
